@@ -1,6 +1,6 @@
 package action.shop;
 
-import java.io.PrintWriter;
+
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,14 +31,10 @@ public class ShopCartListAction implements Action {
 			
 			request.setAttribute("totalMoney", totalMoney);
 			request.setAttribute("cartList", cartList);
-			request.setAttribute("pagefile", "shop/shopCartList.jsp");
-		}else {
-			response.setContentType("text/html;charset=utf-8");
-			PrintWriter out= response.getWriter();
-			out.println("<script>");
-			out.println("alert('장바구니가 비었습니다.');");
-			out.println("location.href='goodsList.shop';");
-			out.println("</script>");
+			request.setAttribute("pagefile", "/shop/shopCartList.jsp");
+			forward.setRedirect(false);
+			forward.setPath("template.jsp");
+			
 		}
 		return forward;
 	}

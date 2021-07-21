@@ -45,9 +45,9 @@ public class ShopFrontController extends HttpServlet {
 	private void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 		request.setCharacterEncoding("utf-8");
 		//1. 요청파악 
-		String requestURI = request.getRequestURI();
+		String RequestURI = request.getRequestURI();
 		String contextPath = request.getContextPath();
-		String command = requestURI.substring(contextPath.length());
+		String command = RequestURI.substring(contextPath.length());
 		Action action = null;
 		ActionForward forward = null;
 		

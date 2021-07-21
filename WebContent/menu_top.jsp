@@ -169,11 +169,11 @@ header .logo a{
 					<li><a
 						href="${pageContext.request.contextPath}/newGoodsList.shop">신상 굿즈</a></li>
 					<li><a
-						href="${pageContext.request.contextPath}/cartList.shop">장바구니</a></li>
+						href="${pageContext.request.contextPath}/goodsCartList.shop">장바구니</a></li>
 				</ul></li>
 			<li><a href="#">회원관리</a>
 				<ul>
-					<li><a href="${pageContext.request.contextPath}/memberJoin.me">회원가입</a></li>
+					<li><a href="${pageContext.request.contextPath}/memberJoin.mem">회원가입</a></li>
 					<li><a
 						href="${pageContext.request.contextPath}/memberListAction.me">굿즈 셀러 등록</a></li>
 				</ul></li>
@@ -186,7 +186,7 @@ header .logo a{
 			<li><a href="#">검색</a></li>
 			<li><c:choose>
 					<c:when test="${id eq null }">
-						<a href="${pageContext.request.contextPath}/memberLogin.me">로그인</a>
+						<a href="${pageContext.request.contextPath}/memberLogin.mem">로그인</a>
 					</c:when>
 					<c:otherwise>
 						<a href="${pageContext.request.contextPath}/memberLogout.me">로그아웃</a>

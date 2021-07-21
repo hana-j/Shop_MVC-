@@ -214,7 +214,7 @@
 			</section>
 		</c:if>
 		<nav id="commandList">
-			<a href="shopList.shop">계속 둘러보기</a>
+			<a href="goodsList.shop">계속 둘러보기</a>
 		</nav>
 	</section>
 </body>

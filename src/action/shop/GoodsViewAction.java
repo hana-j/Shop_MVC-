@@ -19,7 +19,7 @@ public class GoodsViewAction implements Action {
 		Shop goods = goodsViewSvc.getGoods(id);
 		
 		System.out.println(id);
-		
+		//view페이지에 넘겨줄 속성 
 		request.setAttribute("goods",goods );
 		
 		request.setAttribute("pagefile", "shop/goodsView.jsp");

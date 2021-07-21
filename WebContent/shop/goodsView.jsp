@@ -38,6 +38,7 @@
 </head>
 <body>
 <section id="listForm">
+<!-- goods 속성을 El태그 사용해서 값을 받아옴  -->
 <h2>${goods.kind}의 상세 정보</h2>
 
 		<div id="content_left">
@@ -48,13 +49,13 @@
 			<b>종류 : </b> ${goods.kind}<br>
 			<b>가격 : </b> ${goods.price}<br>
 			<p id="desc">
-			<b>내용 : </b> ${dog.content}<br></p>
+			<b>내용 : </b> ${goods.content}<br></p>
 		</section>
 		
 		<div style="clear:both"></div>
 		<nav id="commandList">
 			<a href="goodsList.shop">상품 더 둘러보기</a>
-			<a href="goodsCartAdd.shop?id=${goods.id}">장바구니 담기</a><br>
+			<a href="goodsCartList.shop?id=${goods.id}">장바구니 담기</a><br>
 		</nav>
 		
 

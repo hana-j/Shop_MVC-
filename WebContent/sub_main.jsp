@@ -25,7 +25,7 @@ li{list-style-type:none;}
 .items{
 	padding:15px;
 	padding-bottom:40px;
-	background-color:gray;
+	background-color:#3399ff;
 	}
 .items img{
 	max-width:100%;
@@ -59,7 +59,7 @@ footer .box div:nth-child(2) p{
 }
 footer .box div:last-child{
 	text-align:right;
-	padding-left:400px;
+	padding-left:5px;
 }
 footer::after{
 	content:"";
@@ -75,7 +75,7 @@ footer::after{
 	.col_s_4{width: 50%;}
 	.col_s_5{width: 75%;}
 
-@media only screen and(min-width: 768px){
+@media only screen and (min-width: 768px){
 	/*테블릿 */
 	.col_m_1{width:15%;}
 	.col_m_2{width:25%;}
@@ -92,7 +92,7 @@ footer::after{
 	.items{padding-top: 60px;}
 	.item{padding-right: 15px;}
 }
-@media only screen and(min-width:1200px){
+@media only screen and (min-width:1200px){
 	/*데스크탑*/
 	.col_1{width:15%;}
 	.col_2{width:25%;}
@@ -126,8 +126,8 @@ footer::after{
 			<ul>
 			<li class="col_s_2"><img  src="./images/icon1.jpg"  ></li>
 			<li class="col_s_2">
-				<h3>예약 안내</h3>
-				<p>스튜디오 대여는 사전에 인터넷 예약을 하셔야 합니다. 예약은 1일 이전까지 가능 합니다.</p>
+				<h3>셀러 모집</h3>
+				<p>혼자만 즐기던 취향 공유하고 돈도 벌자 </p>
 			</li>
 			</ul>
 		</div>
@@ -135,8 +135,8 @@ footer::after{
 			<ul>
 			<li class="col_s_2"><img  src="./images/icon2.jpg"  ></li>
 			<li class="col_s_2">
-				<h3>포토갤러리</h3>
-				<p>취업 사진, 가족 사진, 프로필 사진, 우정 사진등 개인 또는 단체가 이용 할 수 있습니다.</p>
+				<h3>나만의 굿즈 제작</h3>
+				<p>똑같은 물건을 싫다! 나는 딱 봐도 내거다 싶은 물건을 원한다</p>
 			</li>
 			</ul>
 		</div>
