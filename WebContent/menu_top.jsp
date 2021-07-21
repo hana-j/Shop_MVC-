@@ -101,59 +101,6 @@ header .logo a{
 	background: none;
 }
 .main_image img{max-width:100%;}
-.banner{padding:15px;}
-.banner li{float:left; padding:10px;}
-.banner img{max-width:100%;}
-.banner p{margin-top:10px; line-height:150%;}
-.banners::after{
-	content:"";
-	clear:both;
-	display:block;
-	}
-.items{
-	padding:15px;
-	padding-bottom:40px;
-	background-color:gray;
-	}
-.items img{
-	max-width:100%;
-	display:block;
-	}
-.items ul{
-	background-color:white;
-	margin-bottom:20px;
-	}
-.items li:nth-child(2){padding:15px 10px;}
-.items li:last-child{padding:0px 10px 10px 10px;}
-.items::after{
-	content:"";
-	clear:both;
-	display:block;
-}
-footer{
-	color:white;
-	background-color:black;
-	padding-bottom:80px;
-}
-footer .box div{padding: 60px 0 0 20px;}
-footer .box div:first-child h1{margin-top:20px;}
-footer .box div:nth-child(2) li{
-	display: inline-block;
-	margin-right: 5px;
-}
-footer .box div:nth-child(2) p{
-	margin-top:20px;
-	line-height: 150%;
-}
-footer .box div:last-child{
-	text-align:right;
-	padding-right:20px;
-}
-footer::after{
-	content:"";
-	clear:both;
-	display: block;
-}
 
 [class*="col_"]
 	{float:left;}
@@ -212,11 +159,11 @@ footer::after{
 <div id="container">
 <header>
 	<div id="box">
-		<h1 class="logo"><a href="index.html"><span>The</span>&nbsp;굿즈 #</a></h1>
+		<h1 class="logo"><a href="${pageContext.request.contextPath}/goodsList.shop"><span>The</span>&nbsp;굿즈 #</a></h1>
 		<nav>
 		<div class="gnb">
 		<ul>
-			<li><a href="${pageContext.request.contextPath}/goodsList.shop">굿즈</a>
+			<li><a href="#">굿즈</a>
 				<ul>
 					<li><a href="${pageContext.request.contextPath}/goodsList.shop">굿즈 홈</a></li>
 					<li><a
@@ -254,85 +201,7 @@ footer::after{
 <section class="main_image">
 <img src="./images/main.jpg" >
 </section>
-	<section class="banners">
-		<div class="box">
-			<div class="banner col_m_4 col_4">
-			<ul>
-			<li class="col_s_2"><img  src="./images/icon1.jpg"  ></li>
-			<li class="col_s_2">
-				<h3>예약 안내</h3>
-				<p>스튜디오 대여는 사전에 인터넷 예약을 하셔야 합니다. 예약은 1일 이전까지 가능 합니다.</p>
-			</li>
-			</ul>
-		</div>
-		<div class="banner col_m_4 col_4">
-			<ul>
-			<li class="col_s_2"><img  src="./images/icon2.jpg"  ></li>
-			<li class="col_s_2">
-				<h3>포토갤러리</h3>
-				<p>취업 사진, 가족 사진, 프로필 사진, 우정 사진등 개인 또는 단체가 이용 할 수 있습니다.</p>
-			</li>
-			</ul>
-		</div>
-		</div>
-</section>
-<section class="items"> 
-		<div class="box">
-			<div class="item col_m_4 col_2">
-			<ul>
-			<li><img src="./images/main2.jpg" > </li>
-				<li><h3>촬영 스튜디오</h3></li>
-				<li>카메라, 촬영 소품, 조명 완벽 구비</li>
-			</ul>
-			</div>
-			<div class="item col_m_4 col_2">
-			<ul>
-			<li><img src="./images/main2.jpg" > </li>
-				<li><h3>촬영 스튜디오</h3></li>
-				<li>카메라, 촬영 소품, 조명 완벽 구비</li>
-			</ul>
-			</div>
-			<div class="item col_m_4 col_2">
-			<ul>
-			<li><img src="./images/main2.jpg" > </li>
-				<li><h3>촬영 스튜디오</h3></li>
-				<li>카메라, 촬영 소품, 조명 완벽 구비</li>
-			</ul>
-			</div>
-			<div class="item col_m_4 col_2">
-			<ul>
-			<li><img src="./images/main2.jpg" > </li>
-				<li><h3>촬영 스튜디오</h3></li>
-				<li>카메라, 촬영 소품, 조명 완벽 구비</li>
-			</ul>
-			</div>
-		</div>
-</section>
 
-<footer>
-		<div class="box">
-			<div class="col_m_3 col_3">
-				<h3>고객센터</h3>
-				<h1>Tel : 1588-1588</h1>
-			</div>
-			<div class="col_m_4 col_4">
-				<ul>
-					<li>회사소개</li>
-					<li>|</li>
-					<li>개인정보처리방침</li>
-					<li>|</li>
-					<li>이용약관</li>
-					<li>|</li>
-					<li>제휴안내</li>
-				</ul>
-				<p>주소 : 경기도 용인시 수지구 정평로<br>
-				   email : photo@korea.com<br>
-				   COTYRIGHT © 2021 The 스튜디오 . ALL RIGHTS RESERVED.
-				</p>
-			</div>
-			
-		</div>
-</footer>
 </div>
 </body>
 </html>

@@ -4,11 +4,11 @@
 		name="jdbc/MySQLDB"
 		auth="Container"
 		type="javax.sql.DataSource"
-		username="java"
-		password="java"
+		username="root"
+		password="jj070814"
 		driverClassName="com.mysql.jdbc.Driver"
 		factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
 		url="jdbc:mysql://localhost:3306/testDB"
-		maxActive="500"/>
-		
+		maxActive="500"
+	/>
 </Context>

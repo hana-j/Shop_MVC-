@@ -18,6 +18,7 @@ public class JdbcUtil {
 			DataSource ds= (DataSource)envCtx.lookup("jdbc/MySQLDB");
 			con = ds.getConnection();
 			con.setAutoCommit(false);
+			System.out.println("connection success");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -26,28 +27,28 @@ public class JdbcUtil {
 
 	public static void close(Connection con) {
 		try {
-			con.close();
+			if(con!=null)con.close();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	public static void close(Statement stmt) {
 		try {
-			stmt.close();
+			if(stmt!=null)stmt.close();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	public static void close(ResultSet rs) {
 		try {
-			rs.close();
+			if(rs!=null)rs.close();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	public static void commit (Connection con) {
 		try {
-			con.close();
+			con.commit();
 			System.out.println("commit success");
 		}catch(Exception e) {
 			e.printStackTrace();

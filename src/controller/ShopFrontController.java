@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import action.Action;
-import action.shop.GoodsListAction;
 import action.shop.*;
 import vo.ActionForward;
 
@@ -57,6 +56,30 @@ public class ShopFrontController extends HttpServlet {
 		//2.각 요청별로 비즈니스 로직호출 
 		if(command.equals("/goodsList.shop")) {
 			action = new GoodsListAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/goodsView.shop")) {
+			action = new GoodsViewAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/goodsCartAdd.shop")) {
+			action = new GoodsCartAddAction();
+			try {
+				forward=action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/goodsCartList.shop")) {
+			action = new ShopCartListAction();
 			try {
 				forward = action.execute(request, response);
 			}catch(Exception e) {

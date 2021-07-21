@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,6 +24,11 @@
 	<tr>
 		<td align="center">
 			<jsp:include page='${pagefile}'></jsp:include>
+		</td>
+	</tr>
+	<tr>
+		<td align="center"><br>
+		<jsp:include page="sub_main.jsp"></jsp:include>
 		</td>
 	</tr>
 </table>
