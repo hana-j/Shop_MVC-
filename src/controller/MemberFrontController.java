@@ -8,15 +8,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import javax.servlet.http.HttpSession;
 
 import action.Action;
-
+import action.member.MemberDeleteAction;
 import action.member.MemberJoinAction;
-
+import action.member.MemberListAction;
 import action.member.MemberLoginAction;
-
-
+import action.member.MemberViewAction;
 import vo.ActionForward;
 
 /**
@@ -85,45 +84,45 @@ public class MemberFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
-//		else if(command.equals("/memberListAction.me")) {
-//			action = new MemberListAction();
-//			try {
-//				forward=action.execute(request, response);
-//			}catch(Exception e) {
-//				e.printStackTrace();
-//			}
-//		}
-//		else if(command.equals("/memberViewAction.me")) {
-//			action = new MemberViewAction();
-//			try {
-//				forward= action.execute(request, response);
-//			}catch(Exception e) {
-//				e.printStackTrace();
-//			}
-//		}
-//		else if(command.equals("/memberDeleteAction.me")) {
-//			action = new MemberDeleteAction();
-//			try {
-//				forward = action.execute(request, response);
-//			}catch(Exception e) {
-//				e.printStackTrace();
-//			}
-//		}
-//		else if(command.equals("/memberLogout.me")) {
-//			HttpSession session = request.getSession();
-//			session.removeAttribute("id");
-//			response.setContentType("text/html;charset=utf-8");
-//			forward = new ActionForward();
-//			forward.setPath("dogList.dog");
-//		}
-//		else if(command.equals("/memberModifyFormAction.me")) {
+		else if(command.equals("/memberListAction.mem")) {
+			action = new MemberListAction();
+			try {
+				forward=action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/memberViewAction.mem")) {
+			action = new MemberViewAction();
+			try {
+				forward= action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/memberDeleteAction.mem")) {
+			action = new MemberDeleteAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		else if(command.equals("/memberLogout.mem")) {
+			HttpSession session = request.getSession();
+			session.removeAttribute("id");
+			response.setContentType("text/html;charset=utf-8");
+			forward = new ActionForward();
+			forward.setPath("dogList.dog");
+		}
+//		else if(command.equals("/memberModifyFormAction.mem")) {
 //			action = new MemberModifyFormAction();
 //			try {
 //				forward = action.execute(request, response);
 //			}catch(Exception e) {
 //				e.printStackTrace();
 //			}
-//		}else if(command.equals("/memberModifyAction.me")) {
+//		}else if(command.equals("/memberModifyAction.mem")) {
 //			action = new MemberModifyAction();
 //			try {
 //				forward = action.execute(request, response);

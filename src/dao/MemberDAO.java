@@ -1,6 +1,8 @@
 package dao;
 
 import java.sql.*;
+import java.util.ArrayList;
+
 import static db.JdbcUtil.*;
 
 import javax.sql.DataSource;
@@ -68,5 +70,74 @@ public class MemberDAO {
 			close(pstmt);
 		}
 		return insertCount;
+	}
+	//회원리스트 검색 
+	public ArrayList<MemberBean> selectMemberList() {
+		ArrayList<MemberBean> memberList = new ArrayList<>();
+		MemberBean list = null;
+		try {
+			pstmt = con.prepareStatement("select * from member");
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				do {
+						list = new MemberBean();
+						list.setId(rs.getString("id"));
+						list.setPassword(rs.getString("password"));
+						list.setName(rs.getString("name"));
+						list.setAge(rs.getInt("age"));
+						list.setGender(rs.getString("gender"));
+						list.setEmail(rs.getString("email"));
+						memberList.add(list);//제발!!! 읽어오면 저장하자 공백넘어가잖아 
+				}while(rs.next());
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close(rs);
+			close(pstmt);
+		}
+		System.out.println(memberList);
+		return memberList;
+	}
+	//회원정보 보기 
+	public MemberBean selectID(String listID) {
+		MemberBean info = null;
+		
+		try {
+			pstmt=con.prepareStatement("select * from member where id=?");
+			pstmt.setString(1, listID);
+			rs=pstmt.executeQuery();
+			if(rs.next()) {
+				info= new MemberBean();
+				info.setId(rs.getString("id"));
+				info.setPassword(rs.getString("password"));
+				info.setName(rs.getString("name"));
+				info.setAge(rs.getInt("age"));
+				info.setGender(rs.getString("gender"));
+				info.setEmail(rs.getString("email"));
+				
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close(rs);
+			close(pstmt); 
+		}
+		return info;
+	}
+	//회원 삭제 
+	public int deleteMember(String delId) {
+		int deleteCount = 0;
+		try {
+			pstmt=con.prepareStatement("delete member where id=?");
+			pstmt.setString(1, delId);
+			deleteCount = pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return deleteCount;
 	}
 }

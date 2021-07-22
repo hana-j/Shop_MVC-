@@ -47,7 +47,7 @@ footer{
 	background-color:black;
 	padding-bottom:80px;
 }
-footer .box div{padding: 60px 0 0 20px;}
+footer .box div{padding: 60px 12px 12px 20px;}
 footer .box div:first-child h1{margin-top:20px;}
 footer .box div:nth-child(2) li{
 	display: inline-block;

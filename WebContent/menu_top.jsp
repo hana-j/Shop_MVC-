@@ -175,7 +175,7 @@ header .logo a{
 				<ul>
 					<li><a href="${pageContext.request.contextPath}/memberJoin.mem">회원가입</a></li>
 					<li><a
-						href="${pageContext.request.contextPath}/memberListAction.me">굿즈 셀러 등록</a></li>
+						href="${pageContext.request.contextPath}/memberListAction.mem">회원리스트</a></li>
 				</ul></li>
 			<li><a href="#">커뮤니티</a>
 				<ul>
@@ -189,7 +189,7 @@ header .logo a{
 						<a href="${pageContext.request.contextPath}/memberLogin.mem">로그인</a>
 					</c:when>
 					<c:otherwise>
-						<a href="${pageContext.request.contextPath}/memberLogout.me">로그아웃</a>
+						<a href="${pageContext.request.contextPath}/memberLogout.mem">로그아웃</a>
 					</c:otherwise>
 				</c:choose>
 		</ul>
