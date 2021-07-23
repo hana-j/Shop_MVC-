@@ -81,11 +81,11 @@
 					<td>성별 : </td>
 					<td>
 					<c:if test="${member.gender eq '남' }">
-						<input type="radio" name = "genger" id="gender" value="남" checked id="gender"/>남자
+						<input type="radio" name = "gender" id="gender" value="남" checked id="gender"/>남자
 						<input type="radio" name="gender" id="gender" value="여"/>여자
 					</c:if>
 					<c:if test="${member.gender eq '여' }">
-						<input type="radio" name = "genger" id="gender" value="남" />남자
+						<input type="radio" name = "gender" id="gender" value="남" />남자
 						<input type="radio" name="gender" id="gender" value="여" checked/>여자
 					</c:if>
 					</td>
