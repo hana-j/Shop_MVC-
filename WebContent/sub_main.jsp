@@ -42,6 +42,7 @@ li{list-style-type:none;}
 	clear:both;
 	display:block;
 }
+
 footer{
 	color:white;
 	background-color:black;
@@ -124,7 +125,7 @@ footer::after{
 		<div class="box">
 			<div class="banner col_m_4 col_4">
 			<ul>
-			<li class="col_s_2"><img  src="./images/icon1.jpg"  ></li>
+			<li class="col_s_4"><img  src="./images/banner_1.jpg" width="250px" height="280px"></li>
 			<li class="col_s_2">
 				<h3>셀러 모집</h3>
 				<p>혼자만 즐기던 취향 공유하고 돈도 벌자 </p>
@@ -133,7 +134,7 @@ footer::after{
 		</div>
 		<div class="banner col_m_4 col_4">
 			<ul>
-			<li class="col_s_2"><img  src="./images/icon2.jpg"  ></li>
+			<li class="col_s_4"><img  src="./images/banner_2.jpg" width="250px" height="280px" ></li>
 			<li class="col_s_2">
 				<h3>나만의 굿즈 제작</h3>
 				<p>똑같은 물건을 싫다! 나는 딱 봐도 내거다 싶은 물건을 원한다</p>
@@ -144,32 +145,32 @@ footer::after{
 </section>
 <section class="items"> 
 		<div class="box">
-			<div class="item col_m_4 col_2">
+			<div class="item col_m_4 col_2" >
 			<ul>
-			<li><img src="./images/main2.jpg" > </li>
+			<li><img src="./images/item_1.jpg" height="335px"> </li>
 				<li><h3>굿즈 #</h3></li>
 				<li>나만의 다양한 굿즈를 제작해보세요</li>
 			</ul>
 			</div>
 			<div class="item col_m_4 col_2">
 			<ul>
-			<li><img src="./images/main2.jpg" > </li>
+			<li><img src="./images/item_2.jpg" height="335px"> </li>
 				<li><h3>취향 모집</h3></li>
 				<li>나와 비슷한 사람과 함께 공동 제작 가능</li>
 			</ul>
 			</div>
 			<div class="item col_m_4 col_2">
 			<ul>
-			<li><img src="./images/main2.jpg" > </li>
+			<li><img src="./images/item_3.jpg" height="335px"> </li>
 				<li><h3>셀러 모집</h3></li>
 				<li>SNS공간이 아닌 나만의 판매공간이 필요한 셀러모집</li>
 			</ul>
 			</div>
 			<div class="item col_m_4 col_2">
 			<ul>
-			<li><img src="./images/main2.jpg" > </li>
-				<li><h3></h3></li>
-				<li></li>
+			<li><img src="./images/item_4.webp" height="335px"> </li>
+				<li><h3>공지사항</h3></li>
+				<li>자주하는 질문</li>
 			</ul>
 			</div>
 		</div>

@@ -199,7 +199,7 @@ header .logo a{
 	</div>
 </header>
 <section class="main_image">
-<img src="./images/main.jpg" >
+<img src="./images/main.jpg"height="300px">
 </section>
 
 </div>

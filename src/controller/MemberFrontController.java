@@ -15,6 +15,8 @@ import action.member.MemberDeleteAction;
 import action.member.MemberJoinAction;
 import action.member.MemberListAction;
 import action.member.MemberLoginAction;
+import action.member.MemberModifyAction;
+import action.member.MemberModifyFormAction;
 import action.member.MemberViewAction;
 import vo.ActionForward;
 
@@ -113,23 +115,24 @@ public class MemberFrontController extends HttpServlet {
 			session.removeAttribute("id");
 			response.setContentType("text/html;charset=utf-8");
 			forward = new ActionForward();
-			forward.setPath("dogList.dog");
+			forward.setPath("goodsList.shop");
 		}
-//		else if(command.equals("/memberModifyFormAction.mem")) {
-//			action = new MemberModifyFormAction();
-//			try {
-//				forward = action.execute(request, response);
-//			}catch(Exception e) {
-//				e.printStackTrace();
-//			}
-//		}else if(command.equals("/memberModifyAction.mem")) {
-//			action = new MemberModifyAction();
-//			try {
-//				forward = action.execute(request, response);
-//			}catch(Exception e) {
-//				e.printStackTrace();
-//			}
-//		}
+		else if(command.equals("/memberModifyFormAction.mem")) {
+			action = new MemberModifyFormAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+			else if(command.equals("/memberModifyAction.mem")) {
+			action = new MemberModifyAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
 		//3.포워딩 
 		if(forward!=null) {
 			if(forward.isRedirect()) {

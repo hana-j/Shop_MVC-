@@ -33,7 +33,7 @@ table{
 				<a href="memberViewAction.mem?id=${member.id}">${member.id}</a>
 			</td>
 			<td>
-				<a href="memberModAction.mem?id=${member.id}">수정</a>
+				<a href="memberModifyFormAction.mem?id=${member.id}">수정</a>
 			</td>
 			<td>
 				<a href="memberDeleteAction.mem?id=${member.id}">삭제</a>

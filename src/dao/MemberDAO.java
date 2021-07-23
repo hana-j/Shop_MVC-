@@ -140,4 +140,26 @@ public class MemberDAO {
 		}
 		return deleteCount;
 	}
+	//회원정보 수정 
+	public int modSuccess(MemberBean member) {
+		int modCount = 0;
+		String sql_mod="update member set password=?, name=?, age=?, gender=?, email=? where id=?";
+		
+		try {
+			pstmt = con.prepareStatement(sql_mod);
+			pstmt.setString(1, member.getPassword());
+			pstmt.setString(2,member.getName());
+			pstmt.setInt(3, member.getAge());
+			pstmt.setString(4, member.getGender());
+			pstmt.setString(5, member.getEmail());
+			pstmt.setString(6, member.getId());
+			modCount = pstmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return modCount;
+	}
 }

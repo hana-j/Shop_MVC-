@@ -31,7 +31,7 @@ public class MemberLoginAction extends ActionForward implements Action {
 			out.println("<script>");
 			out.println("alert('아이디나 비밀번호가 일치하지 않습니다.');");
 			out.println("location.href='./memberLogin.mem';");
-			out.println("</sccrip>");
+			out.println("</script>");
 		}else {
 			forward = new ActionForward();
 			session.setAttribute("id", member.getId());
