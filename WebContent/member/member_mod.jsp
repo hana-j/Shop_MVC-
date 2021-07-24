@@ -24,9 +24,9 @@
 	}
 	function modifyFormSubmit(f){
 		if(f.pw_change.checked){
-		if(f.pass.value!=f.pass_chk.value){
+		if(f.password.value!=f.pass_chk.value){
 			alert("비밀번호가 일치하지 않습니다.");
-			f.pass.value="";
+			f.password.value="";
 			f.pass_chk="";
 			f.pass.focus();
 			return false;
@@ -58,8 +58,9 @@
 						<div id="PWChange" style="display:none">
 							<table>
 							 	<tr>
+							 	<!-- 여기서 사용하는 name 값이 view 페이지에 파라미터로 넘어가니까 값이 같아야함  -->
 							 	<td>비밀번호 : </td>
-							 	<td><input type="password" name="pass" id="pass" value="${member.password}"/></td>
+							 	<td><input type="password" name="password" id="password" value="${member.password}"/></td>
 							 	</tr>
 							 	<tr>
 							 	<td>비밀번호 확인 : </td>
