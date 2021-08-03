@@ -9,6 +9,7 @@ import action.Action;
 import svc.member.MemberJoinService;
 import vo.ActionForward;
 import vo.MemberBean;
+import vo.SHA256;
 
 public class MemberJoinAction extends ActionForward implements Action {
 
@@ -16,9 +17,12 @@ public class MemberJoinAction extends ActionForward implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		MemberBean member = new MemberBean();
 		boolean joinResult = false;
+		//해싱한 비민번호 받아
+		String password = request.getParameter("pass");
+		String hash_password = SHA256.endcodSha256(password);
 		
 		member.setId(request.getParameter("id"));
-		member.setPassword(request.getParameter("pass"));
+		member.setPassword(hash_password);
 		member.setName(request.getParameter("name"));
 		member.setAge(Integer.parseInt(request.getParameter("age")));
 		member.setGender(request.getParameter("gender"));

@@ -162,4 +162,29 @@ public class MemberDAO {
 		}
 		return modCount;
 	}
+	//아이디찾기 
+	public MemberBean findID(String email) {
+		
+		String sql_f="select * from member where email=?";
+		MemberBean member = null;
+		
+		try {
+			pstmt =con.prepareStatement(sql_f);
+			pstmt.setString(1, email);
+			rs=pstmt.executeQuery();
+			
+			if(rs.next()) {
+				member = new MemberBean();
+				member.setId(rs.getString("id"));
+				member.setEmail(rs.getString("email"));
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close(rs);
+			close(pstmt);
+		}
+		
+		return member;
+	}
 }

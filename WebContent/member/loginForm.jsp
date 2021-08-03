@@ -34,7 +34,8 @@
 		<tr>
 			<td colspan="2">
 				<a href="javascript:loginform.submit()">로그인</a>&nbsp;&nbsp;
-				<a href="./memberJoin.mem">회원가입</a>
+				<a href="./memberJoin.mem">회원가입</a>&nbsp;&nbsp;
+				<a href="./idFind.mem">아이디 찾기</a>
 			</td>
 		</tr>
 	</table>

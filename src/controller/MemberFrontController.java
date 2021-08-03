@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import action.Action;
+import action.member.IdFindAction;
 import action.member.MemberDeleteAction;
 import action.member.MemberJoinAction;
 import action.member.MemberListAction;
@@ -125,7 +126,7 @@ public class MemberFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
-			else if(command.equals("/memberModifyAction.mem")) {
+		else if(command.equals("/memberModifyAction.mem")) {
 			action = new MemberModifyAction();
 			try {
 				forward = action.execute(request, response);
@@ -133,6 +134,21 @@ public class MemberFrontController extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/idFind.mem")) {
+				forward = new ActionForward();
+				request.setAttribute("pagefile", "member/idFind.jsp");
+				forward.setPath("template.jsp");
+			}
+		else if(command.equals("/idFindAction.mem")) {
+			action= new IdFindAction();
+			try {
+				forward = action.execute(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+	
 		//3.포워딩 
 		if(forward!=null) {
 			if(forward.isRedirect()) {
